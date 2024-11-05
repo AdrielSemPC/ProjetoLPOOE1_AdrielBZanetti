@@ -1,0 +1,16 @@
+lpoo\sistemaautoescola\dao\PersistenciaJPA.class
+classes\Administrativo.class
+classes\Instrutor.class
+classes\Instrutor_.class
+classes\Curso_.class
+classes\HistoricoAulas_.class
+classes\Curso.class
+classes\Administrativo_.class
+classes\Aluno_.class
+classes\Pessoa_.class
+classes\HistoricoAulas.class
+lpoo\sistemaautoescola\SistemaAUTOESCOLA.class
+classes\Aluno.class
+classes\Pessoa.class
+lpoo\sistemaautoescola\dao\InterfaceBD.class
+classes\RegistroAulas.class
