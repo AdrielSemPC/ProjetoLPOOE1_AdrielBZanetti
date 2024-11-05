@@ -4,6 +4,7 @@
  */
 package classes;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 
@@ -15,13 +16,23 @@ import javax.persistence.*;
 @Entity
 @Table(name = "tbInstrutor")
 public class Instrutor extends Pessoa{
+    @Column(nullable = false)
     private String cnh;
     
     @OneToMany(mappedBy = "instrutor")
     private List<Curso> curso;
     
+    public Instrutor() {
+        this.curso = new ArrayList<>();
+    }
+    
     public String getCnh() {
         return cnh;
+    }
+    
+    public void addCurso(Curso curso) {
+        this.curso.add(curso);
+        //curso.setInstrutor(this);
     }
 
     public void setCnh(String cnh) {

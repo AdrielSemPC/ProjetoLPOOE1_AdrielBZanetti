@@ -27,6 +27,7 @@ public class Curso {
    private int carga_horaria;
    
    @Column(name = "data_inicio", nullable = false)
+   @Temporal(javax.persistence.TemporalType.DATE)
    private Date data_inicio;
    
    @ManyToOne
@@ -41,9 +42,9 @@ public class Curso {
    @JoinColumn(name = "funcionario_id", nullable = false)
    private Administrativo funcionario;
    
-   @ElementCollection
-   @CollectionTable(name = "registro_aulas", joinColumns = @JoinColumn(name = "curso_id"))
-   private List<RegistroAulas> aulas;
+//   @ElementCollection
+//   @CollectionTable(name = "registro_aulas", joinColumns = @JoinColumn(name = "curso_id"))
+//   private List<RegistroAulas> aulas;
 
     public char getCategoria() {
         return categoria;
@@ -69,13 +70,13 @@ public class Curso {
         this.data_inicio = data_inicio;
     }
 
-    public List<RegistroAulas> getAulas() {
-        return aulas;
-    }
-
-    public void setAulas(List<RegistroAulas> aulas) {
-        this.aulas = aulas;
-    }
+//    public List<RegistroAulas> getAulas() {
+//        return aulas;
+//    }
+//
+//    public void setAulas(List<RegistroAulas> aulas) {
+//        this.aulas = aulas;
+//    }
 
     public Instrutor getInstrutor() {
         return instrutor;

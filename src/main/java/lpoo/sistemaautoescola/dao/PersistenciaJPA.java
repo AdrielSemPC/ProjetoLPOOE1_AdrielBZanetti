@@ -20,7 +20,6 @@ public class PersistenciaJPA implements InterfaceBD{
     public PersistenciaJPA(){
         factory = Persistence.createEntityManagerFactory("LPOO_SistemaAUTOESCOLA_jar_1.0-SNAPSHOTPU");
         entity = factory.createEntityManager();
-        
     }
     
     @Override
