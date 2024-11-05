@@ -4,10 +4,35 @@
  */
 package classes;
 
+import java.util.List;
+import javax.persistence.*;
+
 /**
  *
  * @author adrie
  */
-public class Instrutor {
+
+@Entity
+@Table(name = "tbInstrutor")
+public class Instrutor extends Pessoa{
+    private String cnh;
     
+    @OneToMany(mappedBy = "instrutor")
+    private List<Curso> curso;
+    
+    public String getCnh() {
+        return cnh;
+    }
+
+    public void setCnh(String cnh) {
+        this.cnh = cnh;
+    }
+
+    public List<Curso> getCurso() {
+        return curso;
+    }
+
+    public void setCurso(List<Curso> curso) {
+        this.curso = curso;
+    }
 }
