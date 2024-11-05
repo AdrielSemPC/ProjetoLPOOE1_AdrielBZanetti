@@ -15,22 +15,15 @@ import javax.persistence.*;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(name = "tbPessoa")
+@Table(name = "tb_Pessoa")
 public abstract class Pessoa implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
-    
-    @Column(length = 255, nullable = false)
     private String nome;
-    
-    @Column(length = 11)
     private String cpf;
-    
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date data_de_nasc;
-    
-    @Column(length = 11, nullable = false)
     private String fone;
 
     public int getId() {

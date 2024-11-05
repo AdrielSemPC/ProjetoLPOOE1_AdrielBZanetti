@@ -14,7 +14,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "tbInstrutor")
+@Table(name = "tb_Instrutor")
 public class Instrutor extends Pessoa{
     @Column(nullable = false)
     private String cnh;

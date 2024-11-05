@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package classes;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.*;
 
 /**
@@ -13,10 +11,10 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "tbFuncionario")
+@Table(name = "tb_Funcionario")
 public class Administrativo extends Pessoa{
     private String cargo;
-    
+
     public String getCargo() {
         return cargo;
     }

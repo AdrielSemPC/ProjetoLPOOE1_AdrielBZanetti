@@ -79,26 +79,26 @@ public class TestePersistencia {
         al.setRenach("1111");
         al.setMatricula("1234");
         al.setFone("56978945632");
-        al.setCurso(null);
+        al.setCurso(null); //não funciona se al.setCurso() tiver um Curso como argumento
         
 //        System.out.println(al.getCurso());
         
         calendar.set(2024, Calendar.JULY, 1);
         data = calendar.getTime();
-//        ha.addData(data);
-//        calendar.set(2024, Calendar.JULY, 2);
-//        data = calendar.getTime();
-//        ha.addData(data);
-//        calendar.set(2024, Calendar.JULY, 3);
-//        data = calendar.getTime();
-//        ha.addData(data);
-//        calendar.set(2024, Calendar.JULY, 4);
-//        data = calendar.getTime();
-//        ha.addData(data);
-//        calendar.set(2024, Calendar.JULY, 5);
-//        data = calendar.getTime();
-//        ha.addData(data);
-//        ha.setCurso(null);
+        ha.addData(data);
+        calendar.set(2024, Calendar.JULY, 2);
+        data = calendar.getTime();
+        ha.addData(data);
+        calendar.set(2024, Calendar.JULY, 3);
+        data = calendar.getTime();
+        ha.addData(data);
+        calendar.set(2024, Calendar.JULY, 4);
+        data = calendar.getTime();
+        ha.addData(data);
+        calendar.set(2024, Calendar.JULY, 5);
+        data = calendar.getTime();
+        ha.addData(data);
+        ha.setCurso(null); //não funciona se al.setCurso() tiver um Curso como argumento
         
         calendar.set(2024, Calendar.MAY, 12);
         data = calendar.getTime();
@@ -108,15 +108,14 @@ public class TestePersistencia {
         c.setFuncionario(adm);
         c.setInstrutor(i);
         c.setAluno(al);
-        c.setHistoricoAulas(ha);
+        c.setHistorico(ha);
         
         try {
             jpa.persist(adm);
             jpa.persist(i);
             jpa.persist(al);
-            jpa.persist(c);
             jpa.persist(ha);
-            
+            jpa.persist(c);
         } catch (Exception ex) {
             Logger.getLogger(TestePersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }

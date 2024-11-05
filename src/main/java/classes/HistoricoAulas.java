@@ -16,7 +16,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "tbHistorico")
+@Table(name = "tb_Historico")
 public class HistoricoAulas implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -28,11 +28,11 @@ public class HistoricoAulas implements Serializable {
     
     @OneToOne(mappedBy = "historico")
     private Curso curso;
-    
+
     public HistoricoAulas(){
         this.diaFrequentado = new ArrayList<>();
     }
-
+    
     public int getId() {
         return id;
     }

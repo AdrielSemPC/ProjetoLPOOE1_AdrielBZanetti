@@ -11,7 +11,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "tbAluno")
+@Table(name = "tb_Aluno")
 public class Aluno extends Pessoa{
     @Column(name = "renach", nullable = false)
     private String renach;
@@ -44,5 +44,6 @@ public class Aluno extends Pessoa{
 
     public void setCurso(Curso curso) {
         this.curso = curso;
+        //curso.setAluno(this);
     }
 }

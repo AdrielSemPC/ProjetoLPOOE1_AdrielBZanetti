@@ -11,13 +11,13 @@ import java.util.Date;
  * @author adrie
  */
 public class RegistroAulas {
-    private Date diaFrequentado;
+    private Date dia_frequentado;
 
-    public Date getDiaFrequentado() {
-        return diaFrequentado;
+    public Date getDia_frequentado() {
+        return dia_frequentado;
     }
 
-    public void setDiaFrequentado(Date diaFrequentado) {
-        this.diaFrequentado = diaFrequentado;
+    public void setDia_frequentado(Date dia_frequentado) {
+        this.dia_frequentado = dia_frequentado;
     }
 }

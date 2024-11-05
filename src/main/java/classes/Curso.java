@@ -15,7 +15,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "tbCurso")
+@Table(name = "tb_Curso")
 public class Curso implements Serializable {
    @Id
    @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -71,13 +71,14 @@ public class Curso implements Serializable {
         this.data_inicio = data_inicio;
     }
 
-    public HistoricoAulas getHistoricoAulas() {
-        return historico;
-    }
-
-    public void setHistoricoAulas(HistoricoAulas historico) {
-        this.historico = historico;
-    }
+    
+//    public List<RegistroAulas> getAulas() {
+//        return aulas;
+//    }
+//
+//    public void setAulas(List<RegistroAulas> aulas) {
+//        this.aulas = aulas;
+//    }
 
     public Instrutor getInstrutor() {
         return instrutor;
@@ -93,7 +94,6 @@ public class Curso implements Serializable {
 
     public void setAluno(Aluno aluno) {
         this.aluno = aluno;
-//        this.aluno.setCurso(this);
     }
 
     public Administrativo getFuncionario() {
@@ -110,5 +110,13 @@ public class Curso implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public HistoricoAulas getHistorico() {
+        return historico;
+    }
+
+    public void setHistorico(HistoricoAulas historico) {
+        this.historico = historico;
     }
 }
